@@ -1,0 +1,80 @@
+<html>
+<head>
+  <meta charset="utf-8">
+	<title>Subject</title>
+	<script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+	<script language="javascript" type="text/javascript" src="config.js"></script>
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<script language="javascript" type="text/javascript" src="sketch.js"></script>
+		<!-- <script language="javascript" type="text/javascript" src="forex.js"></script> -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" type="text/css" href="final.css">
+   <script language="javascript" type="text/javascript" src="p5.js"></script>
+   <!-- <link rel="stylesheet" type="text/css" href="popup.css"> -->
+   <!-- <script language="javascript" type="text/javascript" src="popup.js"></script> -->
+
+
+</head>
+<style>
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+body{
+  font-family: Omnes;
+}
+
+</style>
+
+<body onscroll="createAlert('','','Here is a bunch of text about some stuff that happened.','warning',false,true,'pageMessages');">
+<nav class="w3-sidebar w3-collapse w3-top w3-large" style="z-index:100;width:210px;font-weight:bold;" id="mynav">
+  <div class="w3-container"  style="color: white;">
+    <h3 class="w3-padding-64"><b>No<br>Name</b></h3>
+  </div>
+  <div class="w3-bar-block  w3-padding-8"  style="color: white;">
+    <a href="course.html" onclick="w3_close()" class="w3-bar-item w3-padding-16 myclass">Courses</a>
+    <a href="exercise.html" onclick="w3_close()" class="w3-bar-item w3-padding-16">Exercises</a>
+    <a href="rubric.html" onclick="w3_close()" class="w3-bar-item w3-padding-16">Rubric</a>
+    <a href="mark.html" onclick="w3_close()" class="w3-bar-item w3-padding-16 active">Students</a>
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-padding-16">AnyName</a>
+    <a href="contact.html" onclick="w3_close()" class="w3-bar-item w3-padding-16">Contact</a>
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-padding-16">Logout</a>
+  </div>
+
+</nav>
+<div class="container-fluid" style="margin-left:250px;margin-right:5px;margin-top: 70px;z-index: 99;">
+  <div class="rows">
+    
+    <div class="col-md-4">
+         <div id="boxy"></div>
+    </div>
+    <div class="col-sm-4">
+         <div id="roll"></div>
+    </div>
+  </div>
+		
+		<br><br><br>
+<div class="rows">
+  <div class="col-sm-12">
+    <div id="listx">
+    <br>
+    </div>
+  </div>
+</div>
+		
+</div>
+
+
+<!-- <div class="card" id="card">
+	<button class="w3-btn w3-orange w3-ripple" id="add" onclick="addex()">Add Exercise</button>
+
+</div> -->
+</body>
+</html>

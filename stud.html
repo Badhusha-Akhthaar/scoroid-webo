@@ -1,0 +1,148 @@
+<html>
+<head>
+  <meta charset="utf-8">
+	<title>Student</title>
+    <link rel="icon" href="Profile/icon.png" sizes="16x16"/>
+	<script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+	<script language="javascript" type="text/javascript" src="config.js"></script>
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <!-- <script language="javascript" type="text/javascript" src="val_course.js"></script> -->
+	<!-- <script language="javascript" type="text/javascript" src="subject.js"></script> -->
+  	<script language="javascript" type="text/javascript" src="stud_username.js"></script>
+<script language="javascript" type="text/javascript" src="logout.js"></script>
+<script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
+<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" type="text/css" href="final.css">
+   <script language="javascript" type="text/javascript" src="p5.js"></script>
+
+</head>
+<style>
+.w3-padding-32{
+    max-height:400px;
+}
+.more{
+  font-size: 22px;
+}
+.uvi{
+  font-size: 18px;
+  font-weight: bold;
+}
+.bada{
+  background-color: #FFE376;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+</style>
+<body>
+
+  <nav class="w3-sidebar w3-collapse w3-top w3-large" style="z-index:100;width:210px;font-weight:bold;" id="mynav">
+    <br>
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px"><span><i class="material-icons">clear</i></span></a>
+
+  <div class="w3-container"  style="color: white;">
+  <h4><img src="Profile/LOG.png" style="width: 150px; "></h4>
+    <h4 class="w3-padding-64" id="account-details"></h4>
+    <!-- <small><p class="w3-padding-64" id="account-details2"></small></h7> -->
+  </div>
+  <div class="w3-bar-block  w3-padding-8"  style="color: white;">
+      <a href="stud.html" onclick="w3_close()" class="w3-bar-item   w3-padding-16 active">Home</a>
+        <a href="TCEcourse.html" onclick="w3_close()" class="w3-bar-item   w3-padding-16 ">Course</a>
+            
+        <a href="meet.html" onclick="w3_close()" class="w3-bar-item  w3-padding-16">Contact</a>
+        <a href="index.html" id="sign-out" onclick="w3_close()" class="w3-bar-item  w3-padding-16">Logout</a>
+  </div>
+</nav>
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large  w3-xlarge w3-padding" style="background-color: #292929">
+  <a href="javascript:void(0)" class="w3-button w3-margin-right" onclick="w3_open()"><i class="material-icons">menu</i></a>
+</header>
+
+
+
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+
+<div class="container-fluid w3-main" style="margin-left:250px;margin-right:5px;margin-top: 70px;z-index: 99;">
+  <div class="rows">
+    <div class="col-sm-4"><h4>Welcome</h4></div>
+    <div class="col-sm-12"> <div class="line"></div></div>
+  <div class="rows">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4" style="margin-top: 10px;">
+       <!-- <button class="w3-btn" id="strt" onclick="start();" style="margin-left: 60px;">Get Started</button> -->
+            <!-- <button class="w3-btn" style="margin-left: 90px;" id="sign-out" >Sign Out</button> -->
+    </div>
+    <div class="row">
+
+      <div class="col-sm-12">
+      <table>
+        <tr>
+          <td><b>Name</b></td>
+          <td id="name"></td>
+        </tr>
+        <tr>
+          <td><b>Roll Number</b></td>
+          <td id="rol"></td>
+        </tr>
+        <tr>
+          <td><b>Register Number</b></td>
+          <td id="reg"></td>
+        </tr>
+        <tr>
+          <td><b>Email Id</b></td>
+          <td id="email"></td>
+        </tr>
+      </table>
+    </div>
+
+    </div>
+
+
+  </div>
+  </div>
+  <div class="rows w3-padding-16" id="card"></div><!--Showing the tiles-->
+</div>
+<script type="text/javascript">
+
+  function w3_open() {
+    document.getElementById("mynav").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+    document.getElementById("mynav").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+function myAccFunc() {
+    var x = document.getElementById("demoAcc");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+        x.setAttribute("style","background-color:  #363636")
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+        x.previousElementSibling.className =
+        x.previousElementSibling.className.replace(" w3-green", "");
+    }
+}
+
+
+</script>
+</body>
+</html>

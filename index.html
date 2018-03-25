@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="Profile/icon.png" sizes="16x16"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Login </title>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <!-- Latest compiled and minified Bootstrap -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <!-- Include Firebase Library -->
+  <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+  <script language="javascript" type="text/javascript" src="config.js"></script>
+<script language="javascript" type="text/javascript" src="val_index.js"></script>
+  <!-- Contacts Store JavaScript -->
+  <script src="login.js"></script>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <style type="text/css">
+  @import url(https://fonts.googleapis.com/css?family=Bangers);
+    #contacts p, #contacts p.lead{ margin: 0; }
+    .authenticated{ display: block;margin-top: 20px;margin-bottom: 10px;}
+    .unauthenticated{display: none;}
+    .modal-header:last-child{border-bottom: 0;}
+    body,html{
+      height:100%;background-image:url("Profile/student.jpg");
+      height: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    /* body{
+     background-image: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/px_by_Gre3g.png);
+    }
+    #photoShowContainer{
+      border: 5px solid #fff;
+      margin: 30px auto 0px auto;
+      position: relative;
+      width: 400px;
+
+      -moz-box-shadow: 0px 0px 25px black;
+      -webkit-box-shadow: 0px 0px 25px black;
+      box-shadow: 0px 0px 25px black;
+    }
+
+    #photoShowWrap{
+      height: 300px;
+      overflow: hidden;
+       position: relative;
+      width: 100%;
+      z-index: 1;
+    }
+
+    #photoShow{
+      height: 300px;
+    	position: relative;
+      width: 1200px;
+    }
+
+    #photoShow img{
+      float: left;
+      height: 300px;
+      width: 400px;
+    } */
+
+  </style>
+</head>
+<body>
+  <div class="container-fluid" style="background-color: #292929; height: 100px; padding-top: 5px;">
+    <span class="userAuth authenticated pull-right">
+        <button type="button" class="btn btn-primary" data-toggle="modal" id="tr" data-target="#registerModal">Teacher Registration</button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" id="sr" data-target="#registerModal2">Student Registration</button>
+        <button type="button" class="btn btn-success" data-toggle="modal" id="log" data-target="#loginModal">Login</button>
+    </span>
+    <h4><img src="Profile/LOG.png" style="width: 150px; margin-left:20px; "></h4>
+    <div class="row unauthenticated">
+      <center>
+        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addContactModal">Add Contact</button> -->
+      </center>
+      <div class="col-md-6">
+        <ul id="contacts" class="list-group">
+          <!-- Conatct Object li.list-group-item.contact will be added here by js -->
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- <div id="photoShowContainer">
+    <div id="photoShowWrap">
+      <div id="photoShow">
+        <img src="Profile/f1.jpg"/>
+          <img src="Profile/f2.jpg"/>
+          <img id="one" src="Profile/badhul.png"/>
+      </div>
+    </div>
+  </div> -->
+  <!-- teacher modal -->
+  <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="Register" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" id="t_close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="registerModalLabel">Teacher Registration</h4>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="recipient-name" class="control-label">First Name:</label>
+            <input type="text" class="form-control" id="registerFirstName">
+             <label for="recipient-name" class="control-label" id="username_error_message"></label>
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="control-label">Last Name:</label>
+            <input type="text" class="form-control" id="registerLastName">
+            <label for="recipient-name" class="control-label" id="userLastname_error_message"></label>
+
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="control-label">Email:</label>
+            <input type="text" class="form-control" id="registerEmail" >
+             <label for="recipient-name" class="control-label" id="email_error_message"></label>
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="control-label">Password:</label>
+            <input type="password" class="form-control" id="registerPassword">
+             <label for="recipient-name" class="control-label" id="password_error_message"></label>
+          </div>
+
+          <div class="form-group">
+            <label for="message-text" class="control-label">Confirm Password:</label>
+            <input type="password" class="form-control" id="registerConfirmPassword">
+             <label for="recipient-name" class="control-label" id="retype_password_error_message"></label>
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="control-label">College Code:</label>
+            <input type="password" class="form-control" id="clg_code">
+             <label for="recipient-name" class="control-label" id="clg_codeerror"></label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <!-- <button type="button" class="btn btn-default" data-dismiss="modal" id="t_close">Close</button> -->
+          <button type="submit" class="btn btn-primary" id="doRegister">Register</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- student modal -->
+  <div class="modal fade" id="registerModal2" tabindex="-1" role="dialog" aria-labelledby="Register" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" id="s_close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="registerModalLabel2">Student Registration</h4>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="recipient-name" class="control-label">Name:</label>
+            <input type="text" class="form-control" id="registerFirstName2">
+             <label for="recipient-name" class="control-label" id="username_error_message2"></label>
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="control-label">Roll Number:</label>
+            <input type="text" class="form-control" id="roll">
+            <label for="recipient-name" class="control-label" id="roll_error_message"></label>
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="control-label">Register Number:</label>
+            <input type="text" class="form-control" id="reg">
+            <label for="recipient-name" class="control-label" id="reg_error_message"></label>
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="control-label">Email:</label>
+            <input type="text" class="form-control" id="registerEmail2" >
+             <label for="recipient-name" class="control-label" id="email_error_message2"></label>
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="control-label">Password:</label>
+            <input type="password" class="form-control" id="registerPassword2">
+             <label for="recipient-name" class="control-label" id="password_error_message2"></label>
+          </div>
+
+          <div class="form-group">
+            <label for="message-text" class="control-label">Confirm Password:</label>
+            <input type="password" class="form-control" id="registerConfirmPassword2">
+             <label for="recipient-name" class="control-label" id="retype_password_error_message2"></label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <!-- <button type="button" class="btn btn-default" data-dismiss="modal" id="s_close">Close</button> -->
+          <button type="submit" class="btn btn-primary" id="doRegister2">Register</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- login modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" id="login_close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="loginModalLabel">Login</h4>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="recipient-name" class="control-label">Email:</label>
+            <input type="text" class="form-control" id="loginEmail">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="control-label">Password:</label>
+            <input type="password" class="form-control" id="loginPassword">
+          </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" id="quickstart-password-reset" name="verify-email" onclick="sendPasswordReset()" >Reset Password</button>
+          <!-- <button type="button" class="btn btn-default" data-dismiss="modal" id="login_close">Close</button> -->
+          <button type="button" class="btn btn-primary" id="doLogin">Login</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+</div>
+</div>
+</div>
+  <div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="Message" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="messageModalLabel">Message</h4>
+        </div>
+        <div class="modal-footer">
+          <div class="pre-auth">
+            <!-- <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button> -->
+            <span class="">
+              <!-- <button type="submit" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#registerModal">Register</button> -->
+              <!-- <button type="submit" class="btn btn-success" data-dismiss="modal" data-toggle="modal" >Login</button> -->
+            </span>
+          </div>
+          <div class="post-auth"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+$(document).ready(function() {
+  setInterval(rotateImages, 4000);
+});
+
+function rotateImages(){
+  $("#photoShow").animate({marginLeft: "-400px"}, 1000).delay(2000);
+
+  $("#photoShow").animate({marginLeft: "-800px"}, 1000).delay(2000);
+
+  $("#photoShow").animate({marginLeft: "0px"}, 1000).delay(2000);
+}
+
+</script>
+</html>

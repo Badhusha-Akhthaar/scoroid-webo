@@ -1,0 +1,176 @@
+ @font-face {
+  font-family: "Arquitecta W00 Bold";
+    src: url("Fonts/Arquitecta W00 Bold.ttf");
+    
+}
+ @font-face {
+  font-family: "Frontage W00 Regular";
+    src: url("Fonts/Frontage W00 Regular.ttf");
+    
+}
+@font-face {
+  font-family: "LuloCleanW01-One";
+    src: url("Fonts/Lulo Clean W01 One.ttf");
+    
+}
+
+
+
+.table-fixed thead {
+  width: 100%;
+  background-color: #5DA2D5;
+    font-family: "LuloCleanW01-One";
+  font-weight: bold;
+  font-size: 12px;
+}
+.table-fixed tbody {
+  height: 230px;
+  overflow-y: auto;
+  width: 100%;
+}
+.table-fixed thead, .table-fixed tbody, .table-fixed tr, .table-fixed td, .table-fixed th {
+  display: block;
+  
+}
+.table-fixed thead > tr> th{
+   background-color: #5DA2D5;
+}
+.table-fixed tbody td, .table-fixed thead > tr> th {
+  float: left;
+  border-bottom-width: 0;
+}
+
+#mynav{
+  background-color: #F78888;
+}
+
+div.side{
+    position: fixed;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: #262626;
+
+    width: 200px;
+    padding: 10px;
+    transition: all ease-in-out 200ms;
+}
+#cbn{
+  background: #262626;
+}
+#cbn2{
+  background: #262626;
+}
+a{
+  font-family: "LuloCleanW01-One";
+  font-size: 16px;
+  text-decoration: none;
+}
+.active
+{
+  background-color: white;
+  color: #F78888;
+}
+a:hover
+{
+  text-decoration: none;
+  background-color: white;
+  color: #F78888;
+}
+/*.myclass:hover {
+   text-decoration: none;
+    color: #F78888 !important;     
+}*/
+
+
+@font-face {
+  font-family: "Maven";
+    src: url("Fonts/Maven.ttf");
+    
+}
+@font-face {
+  font-family: "Omnes";
+    src: url("Fonts/Omnes.ttf");
+    
+}
+
+thead{
+  
+  
+}
+
+
+
+
+
+
+#para{
+  font-family: "LuloCleanW01-One";
+  font-size: 12px;  
+}
+#dbsave{
+  background-color: #292929;
+  color: white;
+}
+input[type="text"]{
+  font: 15px/24px "Lato", Arial, sans-serif; 
+  color: #333; 
+  width: 100%; 
+  box-sizing: border-box; 
+  letter-spacing: 1px;
+}
+h3{
+  font-family: "LuloCleanW01-One";
+}
+#sbtn{
+  background-color: #6495ED;
+}
+button{
+  font-family: "LuloCleanW01-One";
+  font-weight: bold;
+  font-size: 16px;
+}
+label{
+  font-family: "Arquitecta W00 Bold";
+  font-size: 20px;
+}
+.effect-10{border: 0; padding: 7px 15px; border: 1px solid #ccc; position: relative; background: transparent;}
+.effect-10 ~ .focus-bg{position: absolute; left: 0; top: 0; width: 100%; height: 100%; background-color: #ededed; opacity: 0; transition: 0.5s; z-index: -1;}
+.effect-10:focus ~ .focus-bg{transition: 0.5s; opacity: 1;}
+
+body{
+	color:  #303030;
+	/*background: linear-gradient(180deg, #44318D, #2A1B3D);*/
+  background-color: #F3D250;
+	min-height:1000px;
+	background-repeat: no-repeat;
+	position: relative;
+}
+.line{
+  background-color: #292929;
+  height:1px;
+  width: 100%;
+}
+
+.jumbotron{
+	padding-top: 20px;
+	background: #303030;
+  color: white;
+}
+h4{
+  font-family: Omnes;
+  font-size: 24px;
+}
+
+.tide{
+  font-family: "Omnes";
+}
+
+
+body{
+  font-family: Omnes;
+}
+
+tbody{
+  background-color: #ececec;
+}

@@ -1,0 +1,44 @@
+
+
+.CellWithComment{
+  position:relative;
+}
+
+.CellComment1{
+
+    .options {
+         showAllTooltips: true
+       }
+  display:none;
+  position:absolute;
+  z-index:100;
+  border:1px;
+  background-color:white;
+  border-style:solid;
+  border-width:1px;
+  border-color:blue;
+  padding:3px;
+  color:blue;
+  top:-160px;
+  left:20px;
+}
+
+.CellComment{
+
+  display:none;
+  position:absolute;
+  z-index:100;
+  border:1px;
+  background-color:white;
+  border-style:solid;
+  border-width:1px;
+  border-color:blue;
+  padding:3px;
+  color:blue;
+  top:20px;
+  left:20px;
+}
+
+.CellWithComment:hover span.CellComment{
+  display:block;
+}

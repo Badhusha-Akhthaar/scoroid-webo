@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <title>ex</title>
+        <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+        <script language="javascript" type="text/javascript" src="config.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+         <script language="javascript" type="text/javascript" src="p5.js"></script>
+    <script language="javascript" type="text/javascript" src="sk.js"></script>
+    <script language="javascript" type="text/javascript" src="logout.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="final.css">
+      <script language="javascript" type="text/javascript" src="xtra2.js"></script>
+
+<style>
+body{
+    padding: 0;
+    margin: 0;
+}
+</style>
+    </head>
+    <body >
+
+          <div class="jumbotron text-center container-fluid" style="">
+
+  <div class="row">
+    <div class="col-sm-4">
+      <div id="tag">
+        <div id="boxes">
+          <p id="eid" style="font-size: 15px; padding-top: 4px;"></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4"> <div class="text-center"><h3>MCA Lab Mark</h3></div></div>
+    <div class="col-sm-2">
+      
+    </div>
+    <div class="col-sm-2">
+      <div class="text-right"><button id="btnLogout" class="btn btn-action btn-danger" >LogOut</button></div>
+    </div>
+
+  </div>
+
+          
+           
+  </div>
+        <div class="container-fluid"><div class="row">
+          <div class="col-sm-2"></div>
+          <div class="col-sm-8 ">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="uname">Name:</label>
+                    <div class="col-sm-10" ng-app="">
+                       <input class="form-control" id="uname" type="text" name="uname" value="" placeholder="Enter Exercise Name Name" ng-model="name">
+                       <!-- <h1>Hello {{name}}</h1> -->
+                   </div>
+
+                </div>
+               
+                <div  class="form-group">
+                    <label class="control-label col-sm-2" for="ex">Number:</label>
+                    <div class="col-sm-10">
+                       <input class="form-control"id="ex" type="text" name="ex" value="" placeholder="Enter Exercise Number">
+                    </div>
+
+                </div>
+
+            <!-- <input id="check" type="submit" name="check" value="Check" onclick="checkData()"> -->
+            <div class="form-group"><button class="btn btn-success text-center form-control" id="submit" type="submit" name="submit"  onclick="add()">Submit</button> </div>
+
+
+
+
+            </form>
+            <div class="col-sm-2"></div>
+           </div>
+
+        </div> </div>
+
+         <div class="row">
+  <div class="col-sm-2"></div>
+  <div class="col-sm-8"><div id="boxy"></div></div>
+  <div class="col-sm-2"></div>
+</div>
+
+        <div id="disp"></div>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script language-"javascript" type="text/javascript" src="logout.js"></script>
+<div class="footer">
+        
+</div>
+    </body>
+</html>

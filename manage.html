@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ManageEdit</title>
+	  <link rel="icon" href="Profile/icon.png" sizes="16x16"/>
+	<script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+	<script language="javascript" type="text/javascript" src="config.js"></script>
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script language="javascript" type="text/javascript" src="logout.js"></script>
+		<script language="javascript" type="text/javascript" src="username.js"></script>
+		<script language="javascript" type="text/javascript" src="manage.js"></script>
+		<!-- <script language="javascript" type="text/javascript" src="val_edit.js"></script> -->
+
+	<script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
+	<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" type="text/css" href="final.css">
+	<script language="javascript" type="text/javascript" src="p5.js"></script>
+</head>
+<body>
+	<nav class="w3-sidebar w3-collapse w3-top w3-large" style="z-index:100;width:210px;font-weight:bold;" id="mynav">
+    <br>
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px"><span><i class="material-icons">clear</i></span></a>
+  <div class="w3-container"  style="color: white;">
+		<h4><img src="Profile/LOG.png" style="width: 200px; margin-left: -11px;"></h4>
+    <h4 class="w3-padding-64" id="account-details"></h4>
+    <!-- <small><p class="w3-padding-64" id="account-details2"></small></h7> -->
+  </div>
+  <div class="w3-bar-block  w3-padding-8"  style="color: white;">
+          <a href="course.html"  class="w3-bar-item   w3-padding-16 active" onmouseover="myAccFunc()">Courses</a>
+			<div id="demoAcc" class="w3-hide w3-white w3-card-4">
+			<a href="exercise.html" class="w3-bar-item w3-button">Exercise</a>
+			<!-- <a href="#" class="w3-bar-item w3-button">Assessment</a> -->
+			<a href="student.html" class="w3-bar-item w3-button">Students</a>
+		</div>
+      <a href="meet_team.html" onclick="w3_close()" class="w3-bar-item  w3-padding-16">Contact</a>
+      <a href="index.html" id="sign-out" onclick="w3_close()" class="w3-bar-item  w3-padding-16">Logout</a>
+
+  </div>
+
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large  w3-xlarge w3-padding" style="background-color: #292929">
+  <a href="javascript:void(0)" class="w3-button w3-margin-right" onclick="w3_open()"><i class="material-icons">menu</i></a>
+</header>
+
+
+
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+
+
+<div class="container-fluid w3-main" style="margin-left:250px;margin-right:5px;margin-top: 70px;z-index: 99;">
+ 	<div class="row">
+		<div class="col-sm-4"><h4>Edit Rubrics</h4></div>
+		<div class="col-sm-4 text-center"><h4 id="cid"></h4></div>
+		<div class="col-sm-4 text-right"><h4 id="show"></h4></div>
+        <div class="col-sm-12"> <div class="line"></div></div>
+
+    </div><br>
+   <br><br>
+    <div class="row">
+    <div class="col-sm-4">
+         <div id="roll"></div>
+    </div>
+    <div class="col-sm-12">
+         <div id="boxy"></div>
+    </div>
+
+  </div>
+   <div class="row">
+    	<div class="col-sm-4"></div>
+    	<!-- <div class="col-sm-4"><button class="w3-btn" id="sbtn"  style="margin-left: 60px;"><b>-</b>Remove Row</button></div>
+    	<div class="col-sm-4"><button class="w3-btn" id="sbtn"  style="margin-left: 60px;"><b>+</b>Create Row</button></div> -->
+    </div>
+</div>
+</body>
+
+<script type="text/javascript">
+  function w3_open() {
+    document.getElementById("mynav").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+    document.getElementById("mynav").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+function myAccFunc() {
+    var x = document.getElementById("demoAcc");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+        x.setAttribute("style","background-color:  #363636")
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+        x.previousElementSibling.className =
+        x.previousElementSibling.className.replace(" w3-green", "");
+    }
+}
+
+</script>
+</html>

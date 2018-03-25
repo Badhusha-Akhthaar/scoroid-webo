@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Cache-control" content="no-cache">
+	<title></title>
+	<!--A7E871  -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script> -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script language="javascript" type="text/javascript" src="p5.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+		<!-- <script language="javascript" type="text/javascript" src="config.js"></script>
+		<script language="javascript" type="text/javascript" src="sketch.js"></script>
+		<script src="newtab.js" language="javascript" type="text/javascript"></script> -->
+
+		<!-- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script> -->
+
+</head>
+<body style="background-color: rgb(138,214,75); color: white;">
+	
+<div class="container">
+	<div class="row">
+		
+		<div class="col-md-4">
+			<div id="boxy"></div>
+		</div>												
+		<div class="col-md-12">
+			<button class="btn btn-primary" id="addbtn" onclick="loader()">AddRow</button>
+		</div>
+		<div class="col-md-12">
+			<div id="dvData">
+<table class="table table-condensed table-responsive" id="myTable">
+	
+	<tbody id="frm">
+
+	</tbody>
+</table>	
+			</div>
+		</div>
+	</div>
+</div>
+<button id="check" class="btn btn-danger" onclick="add()">Insert_DB</button>
+<div id="one"></div>
+</body>
+<script type="text/javascript">
+	var aa=0;
+	var z=1;
+	var numb=1;
+	var id="ping";
+	var x,ab,bc,cd,tr,ty,tg,we,er;
+	var id1,id2,stat="mark",num="1";
+	var mnc="avg";
+	var mno="total";var abcd=1;
+	var msg="status";
+
+	function loader(){
+	var i=aa;
+	var zz=z+aa;
+
+	for(i;i<zz;i++){
+		var head=document.createElement("tr");
+		ab="tear";
+		bc=zz;
+		cd=ab.concat(bc);
+		head.setAttribute("id",cd);
+        document.getElementById("frm").appendChild(head);
+        
+
+        for(var p=0;p<2;p++){
+            var lab=document.createElement("td");
+        	tr="tead";
+        	ty=p;
+        	we=zz;
+        	er=tr.concat(ty);
+        	tg=er.concat(we);
+        	lab.setAttribute("id",tg);
+        	document.getElementById(cd).appendChild(lab);
+            
+
+
+
+        
+        if(p==0)
+        {
+        	x=document.createElement("button");
+        	x.setAttribute("class","glyphicon glyphicon-plus");
+        	x.setAttribute("onclick","hello()")
+        	document.getElementById(tg).appendChild(x);
+        }
+        if(p==1)
+        {
+        	x=document.createElement("textarea");
+        	x.setAttribute("type","text");
+        	x.setAttribute("class","form-control");
+        	x.setAttribute("style","background-color: rgb(196,242,158); height: 75px");
+        	document.getElementById(tg).appendChild(x);
+        }
+
+        // }
+        // else if(p==1){
+        //     x=document.createElement("textarea");
+        // 	// x.setAttribute("type","text");
+        // 	x.setAttribute("class","form-control");
+        // 	x.setAttribute("style","background-color: rgb(196,242,158); height: 75px");
+        // 	id1=stat.concat(num);
+        // 	num++;
+        // 	x.setAttribute("id",id1);
+        // 	document.getElementById(tg).appendChild(x);
+
+        // }
+        // else if(p==2){
+        //     x=document.createElement("input");
+        // 	x.setAttribute("type","text");
+        // 	x.setAttribute("class","form-control");
+        // 	x.setAttribute("style","background-color: rgb(196,242,158); height: 75px");
+        // 	id1=stat.concat(num);
+        // 	num++;
+        // 	x.setAttribute("id",id1);
+        // 	document.getElementById(tg).appendChild(x);
+
+        // }
+        
+        }
+}
+abcd++;
+aa++;
+}
+function hello(hk){
+		alert("Hello");
+		
+}
+</script>
+
+
+
+
+</html>

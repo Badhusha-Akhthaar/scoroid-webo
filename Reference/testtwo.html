@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Check</title>
+  <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+  <script language="javascript" type="text/javascript" src="config.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+</head>
+<body>
+  <br>
+<div class="col-md-4">
+  
+  <button class="btn btn-warning" onclick="set()">Add_Box</button><button class="btn btn-primary" id="reset" onclick="ogo()">Remove_Box</button><br><br><button id="tb" class="btn btn-success disabled" onclick="add()">Add_Table</button><button class="btn btn-danger disabled" onclick="refresh()" id="mact">Submit</button>
+</div>
+<div class="col-md-12">
+  <div id="boxes" class="form-group form-inline"></div>
+</div>
+
+<div class="col-md-12">
+  <table id="newtable" class="table table-bordered table-responsive table-striped">
+    <tbody id="tab">
+      
+    </tbody>
+  </table>
+</div>
+
+</body>
+ 
+<script type="text/javascript">
+  var database = firebase.database();
+
+function set()
+{
+  var i=Math.floor(Math.random()*50);
+var box;var str="id";
+
+var tablet=document.getElementById("boxes");
+
+    var head=document.createElement("textarea");
+    str=str.concat(i);
+    head.setAttribute("id",str);
+    head.setAttribute("class","form-control");
+    head.setAttribute("style","width: 200px");
+    document.getElementById("boxes").appendChild(head);
+    i++;
+//This for disabling button before submitting    
+var len=tablet.getElementsByTagName("textarea");
+var lval=len.length;
+var ch=document.getElementById("tb");
+if(lval>0){
+ 
+  ch.setAttribute("class","btn btn-success active");
+}
+else{
+    ch.setAttribute("class","btn btn-success disabled");
+}   
+}
+
+
+
+function ogo() {
+  var tablet=document.getElementById("boxes");
+  var select = document.getElementById('boxes');
+  select.removeChild(select.lastChild);
+  var len=tablet.getElementsByTagName("textarea");
+var lval=len.length;
+var ch=document.getElementById("tb");
+if(lval>0){
+ 
+  ch.setAttribute("class","btn btn-success active");
+}
+else{
+    ch.setAttribute("class","btn btn-success disabled");
+}   
+}
+
+
+
+function add()
+{
+var enable=document.getElementById("mact");
+enable.setAttribute("class","btn btn-danger active");
+var td=new Array();
+var form=document.getElementById("tab");
+var trow=document.createElement("tr");
+form.appendChild(trow);
+var tablet=document.getElementById("boxes");
+var len=tablet.getElementsByTagName("textarea");
+var lval=len.length; 
+   for(var j=0;j<len.length;j++)
+   {
+    var td=tablet.childNodes[j].value;
+    // Checking only
+    var tdata=document.createElement("td");
+    if(j==lval-1)
+    {
+      tdata.setAttribute("colspan",lval);
+    }
+    tdata.appendChild(document.createTextNode(td));
+    trow.appendChild(tdata);
+
+   }
+} 
+function refresh(){
+var tblData = new Array();
+var elem = new Array();
+var td = new Array();
+var tr = new Array();
+var table = document.getElementById("tab");
+tr = table.getElementsByTagName('tr');
+var len=table.rows.length;
+
+
+for (i = 0; i < len; i++) 
+{
+  var tcells = table.rows.item(i).cells;
+  var tlen=tcells.length; 
+    
+    for(var k=0;k<tlen;k++)
+    {
+      elem[k] = tcells.item(k).innerHTML;
+      alert(elem[k]);
+    }
+}
+ 
+
+}
+</script>
+</html>

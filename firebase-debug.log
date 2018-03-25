@@ -1,0 +1,72 @@
+[debug] [2018-01-14T14:17:38.389Z] ----------------------------------------------------------------------
+[debug] [2018-01-14T14:17:38.394Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-01-14T14:17:38.395Z] CLI Version:   3.11.0
+[debug] [2018-01-14T14:17:38.395Z] Platform:      win32
+[debug] [2018-01-14T14:17:38.395Z] Node Version:  v8.4.0
+[debug] [2018-01-14T14:17:38.395Z] Time:          Sun Jan 14 2018 19:47:38 GMT+0530 (India Standard Time)
+[debug] [2018-01-14T14:17:38.395Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-01-14T14:17:38.435Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-01-14T14:17:38.436Z] > authorizing via signed-in user
+[debug] [2018-01-14T14:17:38.440Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-01-14T14:17:38.440Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/Owe7fFitksdufVqkwze564EkHuBO0nrJeZ_YdV3ZoHc',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Sun Jan 14 2018 19:47:38 GMT+0530 (India Standard Time)
+[debug] [2018-01-14T14:17:39.014Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-14T14:17:39.114Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/scoroid-webo  
+ Sun Jan 14 2018 19:47:39 GMT+0530 (India Standard Time)
+[debug] [2018-01-14T14:17:41.294Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-14T14:17:41.295Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/scoroid-webo/tokens  
+ Sun Jan 14 2018 19:47:41 GMT+0530 (India Standard Time)
+[debug] [2018-01-14T14:17:48.351Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'H:\FireBase'...
+[info] 
+[debug] [2018-01-14T14:17:48.355Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/scoroid-webo  
+ Sun Jan 14 2018 19:47:48 GMT+0530 (India Standard Time)
+[debug] [2018-01-14T14:17:50.313Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-14T14:17:50.314Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/410432243078/clients/_:getWebAppConfig  
+ Sun Jan 14 2018 19:47:50 GMT+0530 (India Standard Time)
+[debug] [2018-01-14T14:17:51.542Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+
+[debug] [2018-01-15T05:27:02.413Z] ----------------------------------------------------------------------
+[debug] [2018-01-15T05:27:02.438Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-01-15T05:27:02.439Z] CLI Version:   3.11.0
+[debug] [2018-01-15T05:27:02.439Z] Platform:      win32
+[debug] [2018-01-15T05:27:02.439Z] Node Version:  v8.4.0
+[debug] [2018-01-15T05:27:02.441Z] Time:          Mon Jan 15 2018 10:57:02 GMT+0530 (India Standard Time)
+[debug] [2018-01-15T05:27:02.441Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-01-15T05:27:02.520Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-01-15T05:27:02.521Z] > authorizing via signed-in user
+[debug] [2018-01-15T05:27:02.525Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-01-15T05:27:02.526Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/Owe7fFitksdufVqkwze564EkHuBO0nrJeZ_YdV3ZoHc',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Mon Jan 15 2018 10:57:02 GMT+0530 (India Standard Time)
+[debug] [2018-01-15T05:27:03.037Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-15T05:27:03.091Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/scoroid-webo  
+ Mon Jan 15 2018 10:57:03 GMT+0530 (India Standard Time)
+[debug] [2018-01-15T05:27:04.556Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-15T05:27:04.558Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/scoroid-webo/tokens  
+ Mon Jan 15 2018 10:57:04 GMT+0530 (India Standard Time)
+[debug] [2018-01-15T05:27:05.619Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'H:\FireBase'...
+[info] 
+[debug] [2018-01-15T05:27:05.623Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/scoroid-webo  
+ Mon Jan 15 2018 10:57:05 GMT+0530 (India Standard Time)
+[debug] [2018-01-15T05:27:07.204Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-15T05:27:07.204Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/410432243078/clients/_:getWebAppConfig  
+ Mon Jan 15 2018 10:57:07 GMT+0530 (India Standard Time)
+[debug] [2018-01-15T05:27:08.289Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+

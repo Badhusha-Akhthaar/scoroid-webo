@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Cache-control" content="no-cache">
+	<title></title>
+	<!--A7E871  -->
+    <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script language="javascript" type="text/javascript" src="p5.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+		<script language="javascript" type="text/javascript" src="config.js"></script>
+		<script language="javascript" type="text/javascript" src="sketch.js"></script>
+		<script src="newtab.js" language="javascript" type="text/javascript"></script>
+		<script language="javascript" type="text/javascript" src="logout.js"></script>
+		<link rel="stylesheet" type="text/css" href="final.css">
+        
+		<!-- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script> -->
+
+</head>
+<body>
+	<div class="jumbotron text-center container-fluid" style="">
+
+  <div class="row">
+    <div class="col-sm-4">
+    	<div id="tag">
+        <div id="boxes">
+          <p id="eid" style="font-size: 15px; padding-top: 4px;"></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4"> <div class="text-center"><h3>MCA Lab Mark</h3></div></div>
+    <div class="col-sm-2">
+      
+    </div>
+    <div class="col-sm-2">
+      <div class="text-right"><button id="btnLogout" class="btn btn-action btn-danger" >LogOut</button></div>
+    </div>
+  </div>
+
+          
+           
+  </div>
+<div class="container">
+	<div class="row">
+		
+		<div class="col-md-4">
+			<div id="boxy"></div>
+		</div>
+		<div class="col-md-8">
+			<div id="accept"></div>
+		</div>		
+												
+		<div class="col-md-12">
+			
+				
+					<button class="btn btn-primary" id="addbtn" onclick="loader()">AddRow</button>
+			        <button class="btn btn-primary" id="rmvbtn" onclick="reloader()">Remove_Row</button>
+				
+				
+		</div>
+		<div class="col-md-12">
+			<div id="dvData">
+<table class="table table-condensed table-responsive" id="myTable">
+	<thead>
+		<tr>
+			<th>Criteria Number</th>
+			<th>Criteria Name</th>
+			<th>Max Mark</th>
+		</tr>
+	</thead>
+	<tbody id="frm2">
+
+	</tbody>
+</table>	
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4"><button id="check" class="btn btn-danger" onclick="add()">Insert_DB</button></div>
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4"></div>
+  </div>
+</div>
+
+<div id="one"></div>
+<div class="footer">
+        
+</div>
+
+</body>
+
+
+
+
+
+</html>
+

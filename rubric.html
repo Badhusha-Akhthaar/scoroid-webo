@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>My Modal</title>
+
+	<script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+	<script language="javascript" type="text/javascript" src="config.js"></script>
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script language="javascript" type="text/javascript" src="rubric_.js"></script>
+		<!-- <script language="javascript" type="text/javascript" src="forex.js"></script> --> 
+		<script language="javascript" type="text/javascript" src="username.js"></script>
+	<script language="javascript" type="text/javascript" src="logout.js"></script>
+	<script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
+	<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" type="text/css" href="final.css">
+	<script language="javascript" type="text/javascript" src="p5.js"></script>
+
+<link rel="stylesheet" type="text/css" href="sidebar.css">
+  <style type="text/css">
+  td{
+  	height: 60px;
+  }
+
+  </style>
+</head>
+<body onload="w3_close();">
+      <div id="obn" class="w3-padding w3-xlarge w3-text-orange w3-display-topright" style="position: fixed;">
+		<a href="#" onclick="w3_open();"><i class="material-icons" >keyboard_arrow_left</i></a>
+	  </div>
+
+<!--Navbar-->
+<nav class="w3-sidebar w3-collapse w3-top w3-large" style="z-index:100;width:210px;font-weight:bold;" id="mynav">
+	<div class="w3-container"  style="color: white;">
+  <h4 class="w3-padding-64" id="account-details"></h4>
+  </div>
+	<div class="w3-bar-block  w3-padding-8"  style="color: white;">
+			<a href="course.html" onclick="w3_close()" class="w3-bar-item   w3-padding-16">Courses</a>
+			<a href="exercise.html" onclick="w3_close()" class="w3-bar-item  w3-padding-16">Exercises</a>
+			<a href="rubric.html" onclick="w3_close()" class="w3-bar-item  w3-padding-16 active">Rubric</a>
+			<a href="mark.html" onclick="w3_close()" class="w3-bar-item  w3-padding-16">Mark</a>
+			<a href="student.html" onclick="w3_close()" class="w3-bar-item  w3-padding-16">Students</a>
+			<a href="contact.html" onclick="w3_close()" class="w3-bar-item  w3-padding-16">Contact</a>
+			<a href="index.html" id="sign-out" onclick="w3_close()" class="w3-bar-item  w3-padding-16">Logout</a>
+	</div>
+</nav>
+
+<!--Sidebar-->
+<div class="side w3-card w3-padding w3-text-orange w3-sidebar w3-bar-block w3-collapse" id="sd">
+	<div id="cbn2" class="w3-padding w3-text-orange w3-sidebar ">
+		<a href="#" onclick="w3_close();"><i class="material-icons" >keyboard_arrow_right</i></a>
+		<br><br>
+		<div id="cbn">
+
+		</div>
+		    </div>
+
+</div>
+
+<div class="container-fluid" style="margin-left:250px;margin-right:5px;margin-top: 150px;z-index: 99;">
+
+	<div class="col-md-4">
+		<div id="boxy"></div>
+	</div> <br>
+	<div class="col-sm-4">
+		<button class="w3-btn w3-orange w3-ripple" id="add" onclick="addex()">Add Exercise</button>
+
+	</div>
+	<br><br><br>
+	<div class="maindiv_1" id="maindiv1">
+	   	 <div class="form-inline">
+         <div class="rows">
+         	<div class="form-group col-sm-5" id="col1">
+         	</div>
+	   	 	<div class="form-group col-sm-5" id="col2"></div>
+         </div>
+	   	 </div>
+  </div>
+    <br><br>
+    <div class="col-sm-10" id="maindiv2">
+    	<br><br><br>
+	   <div id="maindiv_2"></div>
+    </div>
+    <br><br>
+    <div class="col-sm-12" id="maindiv3">
+    	<br><br><br>
+	   <div id="maindiv_3">
+	   	 <div class="form-inline">
+	   	 	<div class="rows">
+	   	 		<div class="form-group col-sm-4" id="col11"></div>
+	   	 	    <div class="form-group col-sm-4" id="col22"></div>
+	   	 	    <div class="form-group col-sm-4" id="col33"></div>
+	   	 	</div>
+	   	 </div>
+	   </div>
+    </div>
+    <br><br>
+    <div class="col-sm-10" id="maindiv4">
+	   <div id="maindiv_4">
+	   	    <div class="form-inline">
+	   	    	<div class="rows">
+	   	    		<div class="form-group col-sm-5" id="col7"></div>
+	   	    		<div class="form-group col-sm-5" id="col8"></div>
+
+	   	    	</div>
+	   	    </div>
+	   </div>
+	   <div class="form-group col-sm-4" id="col9"></div>
+    </div>
+</div>
+</body>
+</html>

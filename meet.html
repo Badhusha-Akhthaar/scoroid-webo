@@ -1,0 +1,148 @@
+<html>
+<head>
+  <meta charset="utf-8">
+	<title>My Team</title>
+    <link rel="icon" href="Profile/icon.png" sizes="16x16"/>
+	<script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+	<script language="javascript" type="text/javascript" src="config.js"></script>
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+<!-- 	<script language="javascript" type="text/javascript" src="assmt.js"></script> -->
+		<!-- <script language="javascript" type="text/javascript" src="forex.js"></script> -->
+<script language="javascript" type="text/javascript" src="username.js"></script>
+<script language="javascript" type="text/javascript" src="logout.js"></script>
+<script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
+<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" type="text/css" href="final.css">
+ <script language="javascript" type="text/javascript" src="p5.js"></script>
+</head>
+<style>
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+body{
+  font-family: Omnes;
+}
+.clip-svg{
+   clip: circle(100px at center);
+}
+</style>
+<body>
+
+  <nav class="w3-sidebar w3-collapse w3-top w3-large" style="z-index:100;width:210px;font-weight:bold;" id="mynav">
+    <br>
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px"><span><i class="material-icons">clear</i></span></a>
+  <div class="w3-container"  style="color: white;">
+  <h4><img src="Profile/LOG.png" style="width: 200px; margin-left: -11px;"></h4>
+
+    <h4 class="w3-padding-64" id="account-details"></h4>
+    <!-- <small><p class="w3-padding-64" id="account-details2"></small></h7> -->
+  </div>
+  <div class="w3-bar-block  w3-padding-8"  style="color: white;">
+      <a href="stud.html" onclick="w3_close()" class="w3-bar-item   w3-padding-16">Courses</a>
+
+      <a href="meet.html" onclick="w3_close()" class="w3-bar-item  w3-padding-16 active">Contact</a>
+      <a href="index.html" id="sign-out" onclick="w3_close()" class="w3-bar-item  w3-padding-16">Logout</a>
+
+  </div>
+
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large  w3-xlarge w3-padding" style="background-color: #292929">
+  <a href="javascript:void(0)" class="w3-button w3-margin-right" onclick="w3_open()"><i class="material-icons">menu</i></a>
+</header>
+
+
+
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+<div class="container-fluid w3-main" style="margin-left:250px;margin-right:5px;margin-top: 70px;z-index: 99;">
+
+<div class="row">
+    <div class="col-sm-4"><h4>Meet The Team</h4></div>
+    <div class="col-sm-12"> <div class="line"></div></div>
+</div><br>
+<div class="row">
+  <div class="col-sm-4">
+
+    <div class="w3-center"><img src="Profile/jessul.png" style="width: 250px; height: 250px;">
+    </div>
+    <br>
+    <b><p class="w3-center">Jessumer Raj Prasanth</p></b>
+    <br>
+    <div class="w3-center">
+      <p style="color: white;">Tester &#38; Developer!</p>
+      <p style="color: white;"><b>Email: </b>jesseprasanth06@gmail.com</p>
+
+    </div>
+
+
+
+  </div>
+  <div class="col-sm-4">
+
+    <div class="w3-center"><img src="Profile/anul.png" style="width: 250px; height: 250px;" ></div>
+    <br>
+    <b><p class="w3-center">Anu Priya</p></b>
+    <br>
+    <div class="w3-center">
+      <p style="color: white;">Developer &#38; DB admin!</p>
+      <p style="color: white;"><b>Email: </b>anupriyaamir@gmail.com</p>
+    </div>
+
+  </div>
+  <div class="col-sm-4">
+
+    <div class="w3-center"><img src="Profile/badhul.png" style="width: 250px; height: 250px;" >
+    </div>
+    <br>
+    <b><p class="w3-center">Akhthaar Ali Badhusha</p></b>
+    <br>
+    <div class="w3-center">
+      <p style="color: white;">Designer &#38; Programmer!</p>
+      <p style="color: white;"><b>Email: </b>aashiquemd2212@gmail.com</p>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+</div>
+
+</body>
+<script type="text/javascript">
+  function w3_open() {
+    document.getElementById("mynav").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+    document.getElementById("mynav").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+function myAccFunc() {
+    var x = document.getElementById("demoAcc");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+        x.setAttribute("style","background-color:  #363636")
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+        x.previousElementSibling.className =
+        x.previousElementSibling.className.replace(" w3-green", "");
+    }
+}
+
+</script>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student or Teacher</title>
+<script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
+<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+ <link rel="stylesheet" type="text/css" href="final.css">
+<script language="javascript" type="text/javascript" src="p5.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+<div class="container" style="margin-top: 200px;">
+	<div class="row">
+		<div class="col-sm-3"></div>
+		<div class="col-sm-6" >
+
+			
+			<div class="w3-bar w3-black">
+               <button class="w3-bar-item w3-button tablink w3-red" onclick="openCity(event,'Teacher')">Teacher</button>
+               <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'Student')">Student</button>
+               <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'Login')">Login</button>
+
+            </div>
+            <div id="Teacher" class="w3-container w3-border city w3-card w3-padding-16" style="background-color: #FFE376;">
+                <h2>Teacher</h2>
+                <form>                                                                    
+                    <div class="form-group">
+                          <label for="name">Name:</label>
+                          <input type="text" class="form-control" id="name">
+                    </div>
+                    <div class="form-group">
+                          <label for="clg">College:</label>
+                          <input type="text" class="form-control" id="clg">
+                    </div>
+                    <div class="form-group">
+                          <label for="ccode">College Code:</label>
+                          <input type="password" class="form-control" id="ccode">
+                    </div>
+                    <button type="submit" class="btn btn-info btn-block">Register</button>
+                </form>
+                
+            </div>
+            <div id="Student" class="w3-container w3-border city w3-card w3-padding-16" style="display:none; background-color: #FFE376;">
+                <h2>Student</h2>
+                <form>                                                                    
+                    <div class="form-group">
+                          <label for="name">Name:</label>
+                          <input type="text" class="form-control" id="name">
+                    </div>
+                    <div class="form-group">
+                          <label for="clg">College:</label>
+                          <input type="text" class="form-control" id="clg">
+                    </div>
+                    <div class="form-group">
+                          <label for="branch">Branch:</label>
+                          <input type="text" class="form-control" id="branch">
+                    </div>
+                    <div class="form-group">
+                          <label for="sem">Semester:</label>
+                          <input type="number" class="form-control" id="sem">
+                    </div>
+                    <div class="form-group">
+                          <label for="ccode">College Code:</label>
+                          <input type="password" class="form-control" id="ccode">
+                    </div>
+                    <button type="submit" class="btn btn-info btn-block">Register</button>
+                </form>
+                
+            </div>
+            <div id="Login" class="w3-container w3-border city w3-card w3-padding-16" style="display:none; background-color: #FFE376;">
+                <h2>Login</h2>
+                <p>Inga antha buttons vechuko</p>
+                
+            </div>
+		</div>
+		<div class="col-sm-3"></div>		
+	</div>
+</div>
+<script type="text/javascript">
+function openCity(evt, cityName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " w3-red";
+}
+</script>
+
+</body>
+</html>
